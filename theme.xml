@@ -1,344 +1,162 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-Theme: MinUArk-ARKOS
-Original author: Vidnez
-License: creative commons CC-BY-NC-SA
+<!--
+
+es-theme-minuark-4x3 from offalynne  github.com/offalynne/es-theme-minuark-4x3
+based on es-theme-MinUArk by vidnez  github.com/Vidnez/es-theme-MinUArk
+derivative of 'MinUI' by shauninman  github.com/shauninman/MinUI
+
 -->
+
+<?xml version="1.0" encoding="UTF-8"?>
 <theme>
-  <formatVersion>7</formatVersion>
-    
-  <include name="ES Header">./header.xml</include>
-  <include name="Configs">./config.xml</include>
-  
-  <view name="menu">
-  
-    <menuText name="menutitle">
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <fontSize>0.04</fontSize>
-      <color>ffffff</color>
-    </menuText>
-	
-    <menuText name="menufooter">
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <fontSize>0.02</fontSize>
-      <color>ffffff</color>
-    </menuText>
-	
-    <menuText name="menutext">
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <fontSize>0.035</fontSize>
-      <color>ffffff90</color>
-      <selectorColor>${cselector}</selectorColor>
-      <selectorColorEnd>${cselector}</selectorColorEnd>
-      <selectedColor>${cselected}</selectedColor>
-      <separatorColor>00000000</separatorColor>
-    </menuText>
+<formatVersion>7</formatVersion>
 
-    <menuTextEdit name="menutextedit">
-      <inactive>./assets/menu-textinput.png</inactive>
-      <active>./assets/menu-textinput-active.png</active>
-    </menuTextEdit>
-	
-    <menuTextSmall name="menutextsmall">
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <fontSize>0.02</fontSize>
-      <color>ffffff</color>
-    </menuTextSmall>
-	
-    <menuBackground name="menubg">
-      <color>${cmenubg}</color>
-    </menuBackground>
-	
-  </view>
-  
-  <view name="system">
+<!-- System View (List Categories) -->
+<view name="system">
 
-     <image name="staticBackground">
-      <size>1 1</size>
-      <pos>0 0</pos>
-      <origin>0 0</origin>
-      <tile>false</tile>
-      <linearSmooth>true</linearSmooth>
-      <path>${homebg}</path>
-      <zIndex>0</zIndex>
-     </image>
-  
-     <image name="logo">
-      <path>./art/default.svg</path>
-      <path>./art/${system.theme}.svg</path>
-     </image>
-	
-     <text name="logoText">
-      <selectorColor>ffffff</selectorColor>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <forceUppercase>0</forceUppercase>
-      <fontSize>0.05</fontSize>
-      <color>FFFFFF</color>
-     </text>
-	
-  </view>
-  
-  
-  
-  <view name="detailed">
-	
-    <textlist name="gamelist">
-      <selectorColor>${cselector}</selectorColor>
-      <selectorColorEnd>${cselector}</selectorColorEnd>
-      <selectedColor>${cselectedtext}</selectedColor>
-      <primaryColor>ffffff90</primaryColor>
-      <secondaryColor>ffffff90</secondaryColor>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <backgroundCornerSize>1 1</backgroundCornerSize>
-      <padding>1 1</padding>
-      <fontSize>0.049</fontSize>
-      <pos>0.051 0.167</pos>
-      <size>0.6 0.7</size>
-      <alignment>left</alignment>
-      <itemsBeforeCenter>5</itemsBeforeCenter>
-      <horizontalMargin>0.03</horizontalMargin>
-      <origin>0 0</origin>
-      <lineSpacing>1.8</lineSpacing>
-      <selectorImagePath>${selectortyped}</selectorImagePath>
-      <selectorOffsetY>-0.009</selectorOffsetY>
-      <selectorOffsetX>0.2</selectorOffsetX>
-      <selectorHeight>0.105</selectorHeight>
-    </textlist>
-    
-	  <text name="system_name" extra="true">
-      <visible>true</visible>
-      <text>${system.fullName}</text>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <forceUppercase>0</forceUppercase>
-      <size>0.9 0.025</size>
-      <pos>-0.23 0.955</pos>
-      <color>${cinfotext}</color>
-      <alignment>center</alignment>
-      <fontSize>0.026</fontSize>
-      <zIndex>3</zIndex>
-    </text>
+<!-- System BG -->
+<image name="staticBackground">
+<size>1 1</size>
+<pos>0 0</pos>
+<origin>0 0</origin>
+<tile>false</tile>
+<linearSmooth>true</linearSmooth>
+<path>./bg-home.png</path>
+<zIndex>0</zIndex>
+</image>
 
+<!-- System List -->
+<carousel name="systemcarousel" extra="true">
+  <type>vertical</type>
+  <pos>0.074 0.026</pos>
+  <size>1 0.77</size>
+  <origin>0 0</origin>
+  <color>00000000</color>
+  <logoScale>1</logoScale>
+  <logoSize>0.8 0.8</logoSize>
+  <logoPos>0 0</logoPos>
+  <fastScrolling>true</fastScrolling>
+  <maxLogoCount>6</maxLogoCount>
+</carousel>
 
-    <image name="background" extra="true">
-      <origin>0 0</origin>
-      <pos>0 0</pos>
-      <size>1 1</size>
-      <path>${listbg}</path>
-      <zIndex>2</zIndex>
-    </image>
-	
-    <text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate, md_rating, md_image, md_description">
-      <visible>false</visible>
-    </text>
-	
-	    <video name="md_video">
-      <visible>true</visible>
-	    <origin>0.5 0.5</origin>
-      <pos>0.7 0.5</pos>
-      <minSize>1 1</minSize>
-      <delay>${delay}</delay>
-      <showSnapshotNoVideo>true</showSnapshotNoVideo>
-      <showSnapshotDelay>true</showSnapshotDelay>
-      <snapshotSource>image</snapshotSource>
-	    <effect>none</effect>
-      <zIndex>1</zIndex>
-    </video>
-	
-  </view>
-  
+<!-- System Category Title -->
+<image name="logo">
+<path>./art/default.svg</path>
+<path>./art/${system.theme}.svg</path>
+</image>
 
-  <view name="basic">
-    <textlist name="gamelist">
-      <selectorColor>${cselector}</selectorColor>
-      <selectorColorEnd>${cselector}</selectorColorEnd>
-      <selectedColor>${cselectedtext}</selectedColor>
-      <primaryColor>ffffff90</primaryColor>
-      <secondaryColor>ffffff90</secondaryColor>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <fontSize>0.049</fontSize>
-      <pos>0.054 0.167</pos>
-      <size>0.9 0.7</size>
-      <alignment>left</alignment>
-      <horizontalMargin>0.03</horizontalMargin>
-      <origin>0 0</origin>
-      <lineSpacing>1.8</lineSpacing>
-      <selectorImagePath>${selectortypeb}</selectorImagePath>
-      <selectorOffsetY>-0.027</selectorOffsetY>
-      <selectorOffsetX>0</selectorOffsetX>
-      <selectorHeight>0.141</selectorHeight>
-    </textlist>
+<!-- System Misc Text (Hide) -->
+<text name="logoText"><visible>false</visible><pos>0 -1</pos></text>
+<text name="systemInfo"><visible>false</visible><pos>0 -1</pos></text>
 
-    <image name="background" extra="true">
-      <origin>0 0</origin>
-      <pos>0 0</pos>
-      <size>1 1</size>
-      <path>${listbg}</path>
-      <zIndex>1</zIndex>
-    </image>
+</view>
 
+<!-- Category View (List Titles) -->
+<view name="detailed, video, basic">
 
-    <text name="system_name" extra="true">
-      <visible>true</visible>
-      <text>${system.fullName}</text>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <forceUppercase>0</forceUppercase>
-      <size>0.9 0.025</size>
-      <pos>-0.23 0.955</pos>
-      <color>${cinfotext}</color>
-      <alignment>center</alignment>
-      <fontSize>0.026</fontSize>
-      <zIndex>2</zIndex>
-    </text>
+<!-- Category BG -->
+<image name="background" extra="true">
+<origin>0 0</origin>
+<pos>0 0</pos>
+<size>1 1</size>
+<path>./bg-games.png</path>
+<zIndex>2</zIndex>
+</image>
 
-  </view>
-  
-  
-  <view name="grid">
-	  <imagegrid name="gamegrid">
-      <systemNameSuffix>true</systemNameSuffix>
-      <pos>-0.01 0.067</pos>
-      <size>1 0.85</size>
-      <autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
-      <imageSource>image</imageSource>
-      <scrollDirection>vertical</scrollDirection>
-      <autoLayout>3 3</autoLayout>
-      <margin>0.00001 0.015</margin>
-      <padding>0.02 0.02 0 0</padding>
-      <animateSelection>false</animateSelection>
-      <maxlength>.5</maxlength>
-      <showVideoAtDelay>${pandelay}</showVideoAtDelay>
-      <effect>none</effect>
-    </imagegrid>
+<!-- Category List -->
+<textlist name="gamelist">
+<selectorColor>f7fbf7</selectorColor>
+<selectedColor>000000</selectedColor>
+<primaryColor>f7fbf7</primaryColor>
+<secondaryColor>f7fbf7</secondaryColor>
+<fontPath>./BPreplayBold-unhinted.otf</fontPath>
+<backgroundCornerSize>1 1</backgroundCornerSize>
+<fontSize>.051</fontSize>
+<pos>0.00 0.058</pos>
+<size>0.8546875 0.8</size>
+<alignment>left</alignment>
+<horizontalMargin>0.071875</horizontalMargin>
+<origin>0 0</origin>
+<lineSpacing>1.85</lineSpacing>
+<selectorImagePath>./selector.png</selectorImagePath>
+<selectorOffsetY>-0.01</selectorOffsetY>
+<selectorHeight>0.125</selectorHeight>
+<selectorWidth>1</selectorWidth>
+</textlist>
 
-    <gridtile name="default">
-      <backgroundColor>00000000</backgroundColor>
-      <selectionMode>image</selectionMode>
-    </gridtile>
+<!-- Category Misc (Hide) -->
+<text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate"><visible>false</visible></text>
+<rating name="md_rating"><visible>false</visible></rating>
+<image name="md_thumbnail"><visible>false</visible></image>
 
-    <gridtile name="selected">
-      <backgroundCenterColor>${cselector}</backgroundCenterColor>
-      <backgroundEdgeColor>${cselector}</backgroundEdgeColor>
-      <imageColor>ffffff</imageColor>
-    </gridtile>
-    
-    <text name="gridtile">
-      <color>ffffff</color>
-      <backgroundColor>ffffff00</backgroundColor>
-      <fontSize>0.025</fontSize>
-      <alignment>center</alignment>
-      <size>.05 0.24</size>
-      <visible>false</visible>
-    </text>
-    
-    <text name="gridtile_selected">
-      <color>0e0e29</color>
-      <glowColor>ffffff</glowColor>
-      <glowSize>5</glowSize>
-      <visible>false</visible>
-    </text>
+</view>
 
-    <image name="background" extra="true">
-      <origin>0 0</origin>
-      <pos>0 0</pos>
-      <size>1 1</size>
-      <path>${gridbg}</path>
-      <zIndex>1</zIndex>
-    </image>
+<!-- Menu View -->
+<view name="menu">
 
-    <text name="system_name" extra="true">
-      <visible>true</visible>
-      <text>${system.fullName}</text>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <forceUppercase>0</forceUppercase>
-      <size>0.9 0.025</size>
-      <pos>-0.23 0.955</pos>
-      <color>${cinfotext}</color>
-      <alignment>center</alignment>
-      <fontSize>0.026</fontSize>
-      <zIndex>2</zIndex>
-    </text>
+<!-- Menu Title -->
+<menuText name="menutitle">
+<fontPath>./BPreplayBold-unhinted.otf</fontPath>
+<fontSize>0.043</fontSize>
+<color>ffffff</color>
+</menuText>
 
-    <text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate, md_rating">
-      <visible>false</visible>
-    </text>
-  
-    <text name="md_name">
-      <color>${cinfotext}</color>
-      <forceUppercase>0</forceUppercase>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-       <alignment>center</alignment>
-      <fontSize>0.026</fontSize>
-      <pos>0.037 0.02</pos>
-      <size>0.5 0.026</size>
-    </text>
+<!-- Menu Footer -->
+<menuText name="menufooter">
+<fontPath>./BPreplayBold-unhinted.otf</fontPath>
+<fontSize>0.04</fontSize>
+<color>ffffff</color>
+</menuText>
 
-     <video name="md_video">
-      <pos>0.9 0.058</pos>
-      <maxSize>0.15 0.12</maxSize>
-      <origin>0.5 0.5</origin>
-      <default>./assets/no_signal.mp4</default>
-      <delay>2</delay>
-      <showSnapshotNoVideo>false</showSnapshotNoVideo>
-      <showSnapshotDelay>false</showSnapshotDelay>
-      <visible>false</visible>
-     </video>
+<!-- Menu Footer -->
+<menuText name="menutext">
+<fontPath>./BPreplayBold-unhinted.otf</fontPath>
+<fontSize>0.043</fontSize>
+<color>ffffff</color>
+<selectorColor>ffffff</selectorColor>
+<selectorColorEnd>ffffff</selectorColorEnd>
+<selectedColor>000000</selectedColor>
+<separatorColor>00000000</separatorColor>
+</menuText>
 
-	   <image name="gridtile.favorite">
-      <path>./assets/favorites.svg</path>
-      <pos>0.0 0</pos>
-      <maxSize>0.25 0.25</maxSize>
-      <origin>0 0</origin>
-      <color>ffffff80</color>
-     </image>
-     
-     <image name="gridtile.favorite:selected">
-      <path>./assets/favorites.svg</path>
-      <color>ffffff</color>
-     </image>
-     
-     <image name="gridtile.cheevos">
-      <path>./assets/cheevos.svg</path>
-      <pos>0 1</pos>
-      <maxSize>0.25 0.25</maxSize>
-      <origin>0 1</origin>
-      <color>ffffff80</color>
-     </image>
-     
-     <image name="gridtile.cheevos:selected">
-      <path>./assets/cheevos.svg</path>
-      <color>ffffff</color>
-     </image>
+<!-- Menu Text Edit -->
+<menuTextEdit name="menutextedit">
+<inactive>./menu-textinput.png</inactive>
+<active>./menu-textinput-active.png</active>
+</menuTextEdit>
 
-  </view>
-    
+<!-- Menu Text Small -->
+<menuTextSmall name="menutextsmall">
+<fontPath>./BPreplayBold-unhinted.otf</fontPath>
+<fontSize>0.043</fontSize>
+<color>ffffff</color>
+</menuTextSmall>
 
-  <view name="system">
-  
-    <carousel name="systemcarousel" extra="true">
-      <type>vertical</type>
-      <pos>0.08 0.15</pos>
-      <size>1 0.7</size>
-      <origin>0 0</origin>
-      <color>ffffff00</color>
-      <maxLogoCount>7</maxLogoCount>
-      <logoScale>1</logoScale>
-      <itemStacking>descending</itemStacking>
-      <logoSize>0.8 0.8</logoSize>
-      <logoPos>0 0</logoPos>
-      <fastScrolling>true</fastScrolling>
-    </carousel>
-	
-    <text name="systemInfo">
-      <visible>false</visible>
-      <pos>-0.065 0.845</pos>
-      <size>1 0.25</size>
-      <alignment>center</alignment>
-      <backgroundColor>00000000</backgroundColor>
-      <color>${cinfotext}</color>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <fontSize>0.026</fontSize>
-    </text>
+<!-- Menu Backgroundd -->
+<menuBackground name="menubg">
+<color>000000</color>
+</menuBackground>
 
-  </view>
-  
+</view>
+
+<!-- Battery Indicator -->
+<view name="screen">
+<batteryIndicator name="batteryIndicator">
+<pos>0.9 0.0625</pos>
+<size>0.05 0.05</size>
+<color>f7fbf7</color>
+</batteryIndicator>
+</view>
+
+<!-- Clock (Hide) -->
+<text name="clock">
+<pos>0 -1</pos>
+</text>
+
+<!-- Hide Prompts Offscreen -->
+<view name="menu, system, detailed, video, basic">
+<helpsystem name="help">
+<pos>0 -1</pos>
+</helpsystem>
+</view>
+
 </theme>

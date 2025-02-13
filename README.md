@@ -1,62 +1,12 @@
-<h1>This version has been deprecated, the new version will be available at https://github.com/Vidnez/IO.git </h1>
-<b>IMPORTANT</b>
+# es-theme-minuark-4x3
 
-- The new theme (IO) uses features supported only by an updated version of EmulationStation present in the latest version of <b>Rocknix and Knulli.</b>
-If you have a device with ArkOS use this theme instead.
+Minimal ES theme tested with ESv7 for CFW on RG353PS ([ArkOS](https://github.com/christianhaitian/arkos/)) and RG ARC ([TheRetroArena](https://drive.google.com/drive/folders/1JFiuCbPRjdMqinRJSf5hw6os-EsONamT)). Styled after [MinUI frontend](https://github.com/shauninman/MinUI) by [@shauninman](https://github.com/shauninman). Font is [BPreplay](https://backpacker.gr/fonts/6) by [@Gtrianta](https://github.com/Gtrianta).
 
+![Theme preview on devices](https://github.com/user-attachments/assets/3fc5cea1-8be5-44ee-887f-1f8cfa7a2c2a)
 
-<h1 align="center">A theme for 1:1 screens based on ShaunInman's MinUI</h1>
+## Changes from [es-theme-MinUArk](https://github.com/Vidnez/es-theme-MinUArk)
+- Styled closer to source design
+- Systems and Games views rewritten for 4:3
+- Replaced `POWER` prompt with icon per RG devices
 
-
-![social](https://github.com/user-attachments/assets/6a342b6c-18d8-4eef-a848-6444123d128c)
-
-
-
-
-***Jelos/Rocknix and ArkOS versions can be downloaded in the "releases" section.**
-<hr/>
-
-**Original look (MinUI)**
-![preview 1](https://github.com/user-attachments/assets/2ce6196f-e821-46d1-bc4b-cb0cc99ed9da)
-
-<hr/>
-
-**And 4 theme styles (Master System, SNES, NES, PSX)**
-
-![preview 2](https://github.com/user-attachments/assets/84bd2b3e-9efd-4785-82b5-43022c6a4a84)
-
-<hr/>
-
-# Configuration
-
-**Only 1:1 aspect ratio is supported**
-
-For a experience close to the original MinUI interface: 
-
-- Set Transition Style to "Instant" (**Rocknix and ArkOS**) and turn off carousel transitions (**ArkOS only**) in Start Menu > UI Settings.
-- The theme is optimized for use screenshots for the "grid" and "detailed" view. Set the following options in the scraper:
-
-	- **Image Source:** Screenshot
-	- **Box source:** Box2D or Box3D
-	- **Logo Source:** Wheel
- 	- **Scrape Videos:** ON
-  
-
-
-**Optional (ArkOS Only)**
-
-You can download in the "releases section" a loading screen and a boot logo. Installation instructions below.
-
-![preview3](https://github.com/user-attachments/assets/c398861b-2767-4c8a-a866-e6d24810a312)
-
-**Installation instructions:**
-
-- For loading screen, copy loading.jpg and loading.ascii files to roms/launchimages or rooms2/launchimages
-
-- Set "Game Loading Image Mode" to PIC or ASCII and "Game Loading Image" as DEFAULT in Menu > UI Settings.
-
-- For bootlogo, copy the "Image" file to the BOOT partition of your SD1 card overwriting the existing one.
-
-
-
-
+Thanks to [@Vidnez](https://github.com/Vidnez) for the original theme

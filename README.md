@@ -1,18 +1,16 @@
 # es-theme-minuark-4x3
 
-Minimal ES theme emphasizing type tested for CFW on RG353PS (ArkOS) and RG ARC (TheRetroArena)
+Minimal ES theme tested for CFW on RG353PS ([ArkOS](https://github.com/christianhaitian/arkos/)) and RG ARC ([TheRetroArena](https://drive.google.com/drive/folders/1JFiuCbPRjdMqinRJSf5hw6os-EsONamT)). Fork of [`es-theme-MinUArk` by Vidnez](https://github.com/Vidnez/es-theme-MinUArk) styled after [MinUI frontend by shauninman](https://github.com/shauninman/MinUI). Font is [BPreplay by Gtrianta](https://backpacker.gr/fonts/6)
 
-- A fork of `es-theme-MinUArk` by Vidnez: https://github.com/Vidnez/es-theme-MinUArk
-- Styled after `MinUI` frontend by shauninman: https://github.com/shauninman/MinUI
-- Font is `BPreplay` by Gtrianta: https://backpacker.gr/fonts/6
+<img src="https://i.imgur.com/OtYf45q.jpeg"/>
 
 ## Changes from [es-theme-MinUArk](https://github.com/Vidnez/es-theme-MinUArk)
-- Systems and Games views rewritten to 4:3 ratio from the original 1:1
-- Styled a bit closer to original MinUI frontend
-- Replaced `POWER` text in button prompt with icon per RG devices
-- Adjusted text sizes in Menu view
+- Systems and Games views rewritten for 4:3
+- Styled closer to original MinUI frontend
+- Replaced `POWER` prompt with icon per RG devices
+- Adjusted text size in Menu view
 - Removed category label in Games view
-- Removed optional style and color variants
-- Removed battery graphics as they seem to be unsupported and diverge from MinUI's. Consult Menu view for charge level
+- Removed optional styles and color variants
+- Removed battery graphics (unsupported, divergent from MinUI's). Use Menu to check charge
 
-Huge thanks to Vidnez for the theme, especially in rendering out the system names to SVG for correct alignment ^^;
+Thanks to [Vidnez](https://github.com/Vidnez) for the original theme, especially in rendering out all system names to SVG for left alignment

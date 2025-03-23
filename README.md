@@ -11,6 +11,6 @@ Minimal ES theme tested for CFW on RG353PS ([ArkOS](https://github.com/christian
 - Adjusted text size in Menu view
 - Removed category label in Games view
 - Removed optional styles and color variants
-- Removed battery graphics (unsupported, diverges from MinUI; use Menu to check charge)
+- Removed battery graphics (unsupported and diverges from MinUI; use Menu to check charge)
 
 Thanks to [Vidnez](https://github.com/Vidnez) for the original theme, especially in rendering out all system names to SVG for left alignment

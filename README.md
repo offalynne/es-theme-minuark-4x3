@@ -1,6 +1,6 @@
 # es-theme-minuark-4x3
 
-Minimal ES theme tested for CFW on RG353PS ([ArkOS](https://github.com/christianhaitian/arkos/)) and RG ARC ([TheRetroArena](https://drive.google.com/drive/folders/1JFiuCbPRjdMqinRJSf5hw6os-EsONamT)). Fork of [`es-theme-MinUArk` by Vidnez](https://github.com/Vidnez/es-theme-MinUArk) styled after [MinUI frontend by shauninman](https://github.com/shauninman/MinUI). Font is [BPreplay by Gtrianta](https://backpacker.gr/fonts/6)
+Minimal ES theme tested for CFW on RG353PS ([ArkOS](https://github.com/christianhaitian/arkos/)) and RG ARC ([TheRetroArena](https://drive.google.com/drive/folders/1JFiuCbPRjdMqinRJSf5hw6os-EsONamT)). Styled after [MinUI frontend](https://github.com/shauninman/MinUI) by [shauninman](https://github.com/shauninman). Font is [BPreplay](https://backpacker.gr/fonts/6) by [Gtrianta](https://github.com/Gtrianta).
 
 <img src="https://i.imgur.com/OtYf45q.jpeg"/>
 
